@@ -1,0 +1,102 @@
+.lock-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: radial-gradient(circle at 30% 10%, #1e1a2f, #0a0a0a);
+  position: relative;
+  overflow: hidden;
+}
+
+.lock-screen::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(212,175,55,0.05) 0%, transparent 70%);
+  top: -50%;
+  left: -50%;
+  animation: rotate 30s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.lock-card {
+  background: rgba(10, 10, 20, 0.7);
+  backdrop-filter: blur(16px);
+  border-radius: 32px;
+  padding: 2.5rem;
+  max-width: 550px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #fdfaf6;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.time-block {
+  background: rgba(0,0,0,0.5);
+  border-radius: 20px;
+  padding: 1rem;
+  min-width: 80px;
+  border-bottom: 2px solid #d4af37;
+}
+
+.number {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #d4af37;
+  display: block;
+}
+
+.label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.message {
+  margin: 1rem 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.gold-line {
+  width: 80px;
+  height: 2px;
+  background: #d4af37;
+  margin: 1.5rem auto 0;
+}
+
+@media (max-width: 500px) {
+  .lock-card { padding: 1.8rem; }
+  .time-block { min-width: 65px; padding: 0.8rem; }
+  .number { font-size: 1.8rem; }
+  h1 { font-size: 1.5rem; }
+}

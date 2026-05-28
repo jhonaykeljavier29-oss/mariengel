@@ -1,1 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background: #0a0a0a;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #fdfaf6;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+.text-gold {
+  color: #d4af37;
+}
+
+/* Animaciones globales */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 5px rgba(212, 175, 55, 0.3); }
+  100% { text-shadow: 0 0 20px rgba(212, 175, 55, 0.8); }
+}
+
+.fade-up {
+  animation: fadeInUp 1s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
+}
+
+.glow-animation {
+  animation: glow 2s ease-in-out infinite alternate;
+}
