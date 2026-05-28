@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
   checkDate() {
     const now = new Date();
     if (now >= this.targetDate) {
-      this.currentMode = 'locked';
+      this.currentMode = 'birthday';
     } else {
       this.currentMode = 'password';
     }
